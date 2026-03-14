@@ -56,7 +56,7 @@ def generate_website():
     <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="google-site-verification" content="MC_1-1PrBIiTRhzrl7Dn4-TLuk8alDD588JeLyBqq8s" />
+        <meta name="google-site-verification" content="RJEU9h3DT5L4xRKg5ANDmj_SPTnDKshY9n8KCSlrZfQ" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>World of Chess Tournaments | Official Masterclass</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
