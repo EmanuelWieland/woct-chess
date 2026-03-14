@@ -1,0 +1,32 @@
+name: Update YouTube Feed
+
+on:
+  schedule:
+    - cron: '0 */6 * * *' # Alle 6 Stunden
+  workflow_dispatch: # Erlaubt manuelles Starten
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Script
+        run: python generate_web.py
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add index.html
+          git commit -m "Auto-update YouTube feed" || exit 0
+          git push
